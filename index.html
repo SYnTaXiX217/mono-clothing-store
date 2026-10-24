@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Моно — базовая одежда на каждый день</title>
+  <meta name="description" content="Моно: пальто, трикотаж, рубашки и брюки из шерсти, льна и хлопка. Доставка по России, возврат 30 дней.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23181a19'/%3E%3Cpath d='M7 24V8l9 11 9-11v16' fill='none' stroke='white' stroke-width='2.4'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bar">Бесплатная доставка от 15 000 ₽. Возврат в течение 30 дней.</div>
+
+  <header class="nav">
+    <a class="logo" href="#top" aria-label="Моно, на главную">МОНО</a>
+    <nav><a href="#catalog">Каталог</a><a href="#about">О бренде</a><a href="#delivery">Доставка</a></nav>
+    <button class="cartbtn" id="cartBtn" type="button" aria-label="Открыть корзину">Корзина <b id="count">0</b></button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div>
+        <h1><span class="mask"><span>Одежда на</span></span><span class="mask"><span>каждый день,</span></span><span class="mask"><span>без лишнего</span></span></h1>
+        <p>Пальто, трикотаж, рубашки и брюки из шерсти, льна и хлопка. Пять цветов, которые сочетаются между собой.</p>
+        <a class="btn" href="#catalog">Смотреть каталог</a>
+      </div>
+      <div class="hero-art" id="heroArt" role="button" tabindex="0" aria-label="Открыть пальто Дымка">
+        <svg viewBox="0 0 200 270" aria-hidden="true"><path fill="#b3bab5" stroke="rgba(0,0,0,.32)" stroke-width="1.3" stroke-linejoin="round" d="M72 24 L44 38 L16 172 L40 180 L58 112 L58 252 L142 252 L142 112 L160 180 L184 172 L156 38 L128 24 L100 74Z"/><path fill="none" stroke="rgba(0,0,0,.28)" stroke-width="1.2" stroke-linecap="round" d="M100 74 L100 252 M72 24 L88 96 M128 24 L112 96 M62 150 L62 170 M138 150 L138 170"/></svg>
+        <div class="tag"><span>Пальто «Дымка»</span><b>38 900 ₽</b></div>
+      </div>
+    </section>
+
+    <section id="catalog">
+      <div class="head"><h2>Каталог</h2><div class="tabs" id="tabs" role="group" aria-label="Категории"></div></div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section class="story" id="about">
+      <p>Мы шьём меньше, чем могли бы. Каждая вещь проходит три примерки, прежде чем попадает в магазин.</p>
+    </section>
+
+    <section class="info" id="delivery">
+      <div><h3>Доставка</h3><p>По России 2–5 дней, курьером или в пункт выдачи. Бесплатно от 15 000 ₽.</p></div>
+      <div><h3>Возврат</h3><p>30 дней на возврат, если вещь не подошла. Деньги вернём в течение трёх дней.</p></div>
+      <div><h3>Размеры</h3><p>Не уверены в размере? Напишите рост и вес, подскажем в Telegram.</p></div>
+    </section>
+
+    <section class="news">
+      <h2>Узнавайте о новых коллекциях первыми</h2>
+      <div>
+        <form id="form" novalidate>
+          <input type="email" id="email" placeholder="Ваша почта" aria-label="Ваша почта" required>
+          <button type="submit">Подписаться</button>
+        </form>
+        <p class="msg" id="formMsg" role="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© 2026 Моно</span><span>Учебный проект, бренд и цены вымышленные</span></footer>
+
+  <div class="veil" id="veil"></div>
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Карточка товара"></div>
+  <aside class="drawer" id="drawer" aria-label="Корзина">
+    <div class="dh"><h2>Корзина</h2><button type="button" id="closeCart" aria-label="Закрыть корзину">×</button></div>
+    <div class="free" id="free"><span></span><div class="track"><i id="bar"></i></div></div>
+    <ul class="list" id="list"></ul>
+    <div class="sum"><span>Итого</span><b id="total">0 ₽</b></div>
+    <button class="btn" type="button" id="checkout" disabled>Оформить заказ</button>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
